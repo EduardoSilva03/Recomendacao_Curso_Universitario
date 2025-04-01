@@ -69,11 +69,27 @@ class SistemaEspecialista:
     
     def recomendar_cursos(self, area):
         cursos = {
-            "Exatas": ["Engenharia da Computação", "Ciência da Computação", "Matemática", "Engenharia Civil", "Sistemas de Informação"],
-            "Humanas": ["Psicologia", "Filosofia", "Direito", "Jornalismo", "História"],
-            "Biológicas": ["Medicina", "Biomedicina", "Enfermagem", "Nutrição", "Biologia"],
-            "Sociais": ["Administração", "Marketing", "Economia", "Relações Internacionais", "Gestão de RH"]
-        }
+        "Exatas": [
+            "Engenharia da Computação", "Ciência da Computação", "Matemática", "Engenharia Civil",
+            "Sistemas de Informação", "Engenharia Elétrica", "Física", "Estatística", "Engenharia Mecânica",
+            "Engenharia de Software", "Análise e Desenvolvimento de Sistemas", "Ciência de Dados"
+        ],
+        "Humanas": [
+            "Psicologia", "Filosofia", "Direito", "Jornalismo", "História",
+            "Letras", "Serviço Social", "Pedagogia", "Sociologia", "Teologia",
+            "Ciências Políticas", "Antropologia", "Artes Cênicas", "Comunicação Social"
+        ],
+        "Biológicas": [
+            "Medicina", "Biomedicina", "Enfermagem", "Nutrição", "Biologia",
+            "Farmácia", "Fisioterapia", "Odontologia", "Educação Física", "Zootecnia",
+            "Veterinária", "Biotecnologia", "Ecologia", "Ciências Ambientais"
+        ],
+        "Sociais": [
+            "Administração", "Marketing", "Economia", "Relações Internacionais", "Gestão de RH",
+            "Ciências Contábeis", "Publicidade e Propaganda", "Gestão Pública", "Logística", "Comércio Exterior",
+            "Empreendedorismo", "Finanças", "Turismo", "Ciências Atuariais"
+        ]
+    }
         
         recomendados = cursos.get(area, [])
         for i, curso in enumerate(recomendados[:5], 1):
